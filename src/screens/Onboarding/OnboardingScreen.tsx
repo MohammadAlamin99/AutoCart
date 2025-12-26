@@ -19,7 +19,6 @@ const OnboardingScreen = ({ navigation }: Props) => {
         {/* content */}
         <View style={styles.content}>
           <Text style={styles.title}>Easy way to buy{'\n'}your dream car</Text>
-
           <Text style={styles.subtitle}>
             By using the car, you can move quickly from one place to another in
             your daily life.
@@ -39,7 +38,6 @@ const OnboardingScreen = ({ navigation }: Props) => {
             <TouchableOpacity onPress={handleNext}>
               <Text style={styles.nextText}>Next</Text>
             </TouchableOpacity>
-            {/* <Button title="Next" onPress={handleNext} /> */}
           </View>
         </View>
       </ImageBackground>

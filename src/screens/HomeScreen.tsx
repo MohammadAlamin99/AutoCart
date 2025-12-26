@@ -1,25 +1,26 @@
-import { Text, View } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import React, { Component } from 'react';
 
 export class HomeScreen extends Component {
   render() {
     return (
-      <View>
-        <Text
-          style={{
-            fontSize: 24,
-            color: '#000',
-            textAlign: 'center',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-        >
-          Home Screen
-        </Text>
+      <View style={styles.container}>
+        <Text style={styles.text}>Home Screen</Text>
       </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  text: {
+    fontSize: 24,
+    color: '#000',
+  },
+});
 
 export default HomeScreen;

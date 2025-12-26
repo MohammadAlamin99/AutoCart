@@ -16,7 +16,7 @@ export const styles = StyleSheet.create({
     fontWeight: '600',
   },
   image: {
-    width: 261,
+    w 1,
     height: 210,
     marginTop: 64,
     marginInline: 'auto',
