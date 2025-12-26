@@ -48,12 +48,12 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     backgroundColor: 'white',
     marginRight: 6,
-    opacity:0.2
+    opacity: 0.2,
   },
   activeDot: {
     backgroundColor: '#07B007',
     width: 30,
-    opacity:1,
+    opacity: 1,
   },
   nextText: {
     color: '#07B007',
@@ -63,4 +63,3 @@ const styles = StyleSheet.create({
 });
 
 export default styles;
-
