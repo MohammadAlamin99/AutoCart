@@ -1,16 +1,24 @@
-import { View } from 'react-native';
+// import React, { Component } from 'react';
+// // import OnboardingScreen from './src/screens/Onboarding/OnboardingScreen';
+// import RegScanScreen from './src/screens/regScan/RegScanScreen';
+
+// export class App extends Component {
+//   render() {
+//     return (
+//       <RegScanScreen />
+//       // <OnboardingScreen />
+//     );
+//   }
+// }
+
+// export default App;
 import React, { Component } from 'react';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import OnboardingScreen from './src/screens/Onboarding/OnboardingScreen';
+import RegScanScreen from './src/screens/regScan/RegScanScreen';
 
 export class App extends Component {
   render() {
     return (
-      <SafeAreaView>
-        <View>
-          <OnboardingScreen />
-        </View>
-      </SafeAreaView>
+      <RegScanScreen />
     );
   }
 }
