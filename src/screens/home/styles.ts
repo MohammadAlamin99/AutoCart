@@ -1,0 +1,85 @@
+import { StyleSheet } from 'react-native';
+export const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#ffffff',
+  },
+  header: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: 16,
+    paddingVertical: 10,
+    borderBottomWidth: 0.5,
+    borderBottomColor: '#f0f0f0',
+    backgroundColor: '#F9FAFB',
+  },
+  logo: {
+    width: 100,
+    height: 40,
+    objectFit: 'contain',
+  },
+  headerRight: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  smallAddButton: {
+    backgroundColor: '#00b300',
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 8,
+    marginRight: 10,
+  },
+  smallAddButtonText: {
+    color: '#fff',
+    fontSize: 12,
+    fontWeight: '600',
+    marginRight: 4,
+  },
+  filterIconButton: {
+    padding: 4,
+  },
+
+  content: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingHorizontal: 16,
+  },
+  mainHeading: {
+    fontSize: 18,
+    fontWeight: '400',
+    color: '#111827',
+    textAlign: 'center',
+    lineHeight: 28,
+    marginBottom: 12,
+    width: '100%',
+    fontFamily: 'SourceSans3-Regular',
+  },
+  subHeading: {
+    fontSize: 14,
+    color: '#111827',
+    textAlign: 'center',
+    marginBottom: 35,
+    fontWeight: '400',
+  },
+  mainButton: {
+    backgroundColor: '#07B007',
+    paddingVertical: 14,
+    paddingHorizontal: 32,
+    borderRadius: 10,
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  mainButtonText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: '600',
+  },
+});

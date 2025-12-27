@@ -1,14 +1,49 @@
 import React from 'react';
-import { View, Text, StatusBar, Image, TouchableOpacity } from 'react-native';
+import {
+  View,
+  Text,
+  StatusBar,
+  Image,
+  TouchableOpacity,
+  Alert,
+} from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { launchCamera } from 'react-native-image-picker';
 import { styles } from './style';
+
 const APP_BAR_COLOR = '#f3f4f5ff';
 const SCREEN_BG_COLOR = '#ffffff';
 
 const RegScanScreen = () => {
+  const openCamera = () => {
+    launchCamera(
+      {
+        mediaType: 'photo',
+        cameraType: 'back',
+        saveToPhotos: true,
+      },
+      response => {
+        if (response.didCancel) {
+          return;
+        }
+
+        if (response.errorCode) {
+          Alert.alert('Camera Error', response.errorMessage || 'Unknown error');
+          return;
+        }
+
+        const imageUri = response.assets?.[0]?.uri;
+        console.log('Captured image URI:', imageUri);
+
+        // 👉 এখানে imageUri দিয়ে next step করতে পারবেন
+        // เช่น: upload, OCR, preview screen ইত্যাদি
+      },
+    );
+  };
+
   return (
     <View style={{ flex: 1, backgroundColor: SCREEN_BG_COLOR }}>
-      {/* STATUS BAR — app bar only */}
+      {/* STATUS BAR */}
       <StatusBar
         backgroundColor={APP_BAR_COLOR}
         barStyle="dark-content"
@@ -22,7 +57,7 @@ const RegScanScreen = () => {
         </View>
       </SafeAreaView>
 
-      {/* SCREEN CONTENT */}
+      {/* CONTENT */}
       <Image
         source={require('../../assets/images/scanner.png')}
         style={styles.image}
@@ -36,7 +71,7 @@ const RegScanScreen = () => {
       </View>
 
       <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={openCamera}>
           <Text style={styles.buttonText}>Open Camera</Text>
         </TouchableOpacity>
 
