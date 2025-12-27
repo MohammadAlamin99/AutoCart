@@ -4,7 +4,9 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { styles } from './styles';
 import PlusIcon from '../../components/svg/PluseIcon';
 import FilterIcon from '../../components/svg/FilterIcon';
+import { useNavigation } from '@react-navigation/native';
 const HomeScreen = () => {
+  const navigation = useNavigation();
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="dark-content" backgroundColor="#F9FAFB" />
@@ -17,7 +19,10 @@ const HomeScreen = () => {
         </View>
 
         <View style={styles.headerRight}>
-          <TouchableOpacity style={styles.smallAddButton}>
+          <TouchableOpacity
+            style={styles.smallAddButton}
+            onPress={() => navigation.navigate('AddPlaceAdScreen' as never)}
+          >
             <Text style={styles.smallAddButtonText}>Place Ad</Text>
             <PlusIcon width={16} height={16} color="#fff" />
           </TouchableOpacity>
