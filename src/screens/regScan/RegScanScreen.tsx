@@ -11,8 +11,8 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { launchCamera } from 'react-native-image-picker';
 import { styles } from './style';
 
-const APP_BAR_COLOR = '#f3f4f5ff';
-const SCREEN_BG_COLOR = '#ffffff';
+const APP_BAR_COLOR = '#F9FAFB';
+const SCREEN_BG_COLOR = '#F9FAFB';
 
 const RegScanScreen = () => {
   const openCamera = () => {
@@ -31,12 +31,8 @@ const RegScanScreen = () => {
           Alert.alert('Camera Error', response.errorMessage || 'Unknown error');
           return;
         }
-
         const imageUri = response.assets?.[0]?.uri;
         console.log('Captured image URI:', imageUri);
-
-        // 👉 এখানে imageUri দিয়ে next step করতে পারবেন
-        // เช่น: upload, OCR, preview screen ইত্যাদি
       },
     );
   };

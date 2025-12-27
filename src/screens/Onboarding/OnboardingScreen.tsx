@@ -7,7 +7,7 @@ import { RootStackParamList } from '../../navigation/RootNavigator';
 type Props = NativeStackScreenProps<RootStackParamList, 'Onboarding'>;
 const OnboardingScreen = ({ navigation }: Props) => {
   const handleNext = () => {
-    navigation.replace('BottomTabs');
+    navigation.replace('account');
   };
   return (
     <View style={styles.container}>

@@ -9,13 +9,21 @@ import {
   StatusBar,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import Ionicons from 'react-native-vector-icons/Ionicons';
+import ChevronLeftIcon from '../../components/svg/ChevronLeftIcon';
+import ChevronDownIcon from '../../components/svg/ChevronDownIcon';
+import PlusIcon from '../../components/svg/PluseIcon';
+import { Check } from 'lucide-react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const PlaceAdScreen: React.FC = () => {
   const [phone, setPhone] = useState('');
   const [location, setLocation] = useState('');
   const [price, setPrice] = useState('');
   const [description, setDescription] = useState('');
+  const navigation = useNavigation();
+  const handleApply = () => {
+    navigation.goBack();
+  };
 
   return (
     <SafeAreaView style={styles.container}>
@@ -23,8 +31,8 @@ const PlaceAdScreen: React.FC = () => {
 
       {/* Header */}
       <View style={styles.header}>
-        <TouchableOpacity style={styles.headerIcon}>
-          <Ionicons name="chevron-back" size={24} color="#333" />
+        <TouchableOpacity style={styles.headerIcon} onPress={handleApply}>
+          <ChevronLeftIcon />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>Place Ad</Text>
         <TouchableOpacity>
@@ -41,7 +49,7 @@ const PlaceAdScreen: React.FC = () => {
           <Text style={styles.label}>Category</Text>
           <TouchableOpacity style={styles.dropdownInput}>
             <Text style={styles.placeholderText}>Select Category</Text>
-            <Ionicons name="chevron-down" size={20} color="#999" />
+            <ChevronDownIcon />
           </TouchableOpacity>
         </View>
 
@@ -51,7 +59,7 @@ const PlaceAdScreen: React.FC = () => {
           <Text style={styles.subLabel}>You can upload up to 20 images</Text>
           <TouchableOpacity style={styles.uploadBox}>
             <View style={styles.plusCircle}>
-              <Ionicons name="add" size={24} color="#A0AEC0" />
+              <PlusIcon color="#9CA3AF" />
             </View>
           </TouchableOpacity>
         </View>
@@ -64,7 +72,7 @@ const PlaceAdScreen: React.FC = () => {
           </Text>
           <TouchableOpacity style={styles.uploadBox}>
             <View style={styles.plusCircle}>
-              <Ionicons name="add" size={24} color="#A0AEC0" />
+              <PlusIcon color="#9CA3AF" />
             </View>
           </TouchableOpacity>
         </View>
@@ -104,7 +112,7 @@ const PlaceAdScreen: React.FC = () => {
           <View style={styles.priceRow}>
             <TouchableOpacity style={styles.currencySelector}>
               <Text style={styles.currencyText}>€</Text>
-              <Ionicons name="chevron-down" size={16} color="#999" />
+              <ChevronDownIcon color="#9CA3AF" width={10} height={10} />
             </TouchableOpacity>
             <TextInput
               style={[styles.textInput, { flex: 1, marginLeft: 10 }]}
@@ -146,11 +154,9 @@ const PlaceAdScreen: React.FC = () => {
             </View>
 
             <View style={styles.featureRow}>
-              <Ionicons
-                name="checkmark-circle-outline"
-                size={20}
-                color="#4A5568"
-              />
+              <View style={styles.checkContainer}>
+                <Check width={16} height={16} color="#4B5563" />
+              </View>
               <Text style={styles.featureText}>5 Ads, Standard Support</Text>
             </View>
 
@@ -207,25 +213,25 @@ const styles = StyleSheet.create({
     width: 40,
   },
   headerTitle: {
-    fontSize: 18,
-    fontWeight: '700',
-    color: '#1A202C',
+    fontSize: 20,
+    fontWeight: '600',
+    color: '#1F2937',
   },
   resetText: {
-    fontSize: 16,
-    color: '#F56565',
-    fontWeight: '500',
+    fontSize: 14,
+    color: '#DC2626',
+    fontWeight: '400',
   },
   scrollContent: {
     padding: 16,
   },
   inputContainer: {
-    marginBottom: 20,
+    marginBottom: 24,
   },
   label: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#4A5568',
+    color: '#1F2937',
     marginBottom: 8,
   },
   subLabel: {
@@ -238,7 +244,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     borderWidth: 1,
-    borderColor: '#E2E8F0',
+    borderColor: '#9CA3AF',
     borderRadius: 8,
     paddingHorizontal: 12,
     height: 50,
@@ -251,17 +257,17 @@ const styles = StyleSheet.create({
     width: 80,
     height: 80,
     borderWidth: 1,
-    borderColor: '#E2E8F0',
-    borderRadius: 8,
+    borderColor: '#CACACA',
+    borderRadius: 4,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#FFFFFF',
   },
   plusCircle: {
-    width: 32,
-    height: 32,
+    width: 20,
+    height: 20,
     borderRadius: 16,
-    backgroundColor: '#F7FAFC',
+    backgroundColor: '#E5E7EB',
     borderWidth: 1,
     borderColor: '#E2E8F0',
     justifyContent: 'center',
@@ -269,15 +275,24 @@ const styles = StyleSheet.create({
   },
   previewStoryButton: {
     borderWidth: 1,
-    borderColor: '#00C853',
+    borderColor: '#07B007',
     borderRadius: 8,
-    height: 50,
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: 24,
+    paddingVertical: 14,
+  },
+  checkContainer: {
+    width: 24,
+    height: 24,
+    borderRadius: 100,
+    borderWidth: 1,
+    borderColor: '#4B5563',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   previewStoryText: {
-    color: '#00C853',
+    color: '#07B007',
     fontSize: 16,
     fontWeight: '600',
   },
@@ -392,16 +407,16 @@ const styles = StyleSheet.create({
     backgroundColor: '#00C853',
   },
   upgradeButton: {
-    backgroundColor: '#EDF2F7',
-    height: 44,
+    backgroundColor: '#E5E7EB',
+    paddingVertical: 12,
     borderRadius: 8,
     justifyContent: 'center',
     alignItems: 'center',
   },
   upgradeButtonText: {
-    color: '#2F855A',
+    color: '#07B007',
     fontWeight: '600',
-    fontSize: 15,
+    fontSize: 16,
   },
   publishButton: {
     backgroundColor: '#00C853',

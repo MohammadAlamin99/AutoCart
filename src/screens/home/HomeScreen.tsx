@@ -27,7 +27,10 @@ const HomeScreen = () => {
             <PlusIcon width={16} height={16} color="#fff" />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.filterIconButton}>
+          <TouchableOpacity
+            style={styles.filterIconButton}
+            onPress={() => navigation.navigate('FilterScreen' as never)}
+          >
             <FilterIcon />
           </TouchableOpacity>
         </View>
@@ -43,7 +46,10 @@ const HomeScreen = () => {
           The sooner you start, the faster you sell.
         </Text>
 
-        <TouchableOpacity style={styles.mainButton}>
+        <TouchableOpacity
+          style={styles.mainButton}
+          onPress={() => navigation.navigate('AddPlaceAdScreen' as never)} 
+        >
           <Text style={styles.mainButtonText}>Post Your First Ad</Text>
         </TouchableOpacity>
       </View>
