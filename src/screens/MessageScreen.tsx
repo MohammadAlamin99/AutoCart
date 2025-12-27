@@ -1,11 +1,11 @@
 import { View, Text, StyleSheet } from 'react-native';
 import React, { Component } from 'react';
 
-export class HomeScreen extends Component {
+export class MessageScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.text}>Home Screen</Text>
+        <Text style={styles.text}>Message Screen</Text>
       </View>
     );
   }
@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'row',
-    gap:10,
+    gap: 10,
   },
   text: {
     fontSize: 24,
@@ -25,4 +25,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomeScreen;
+export default MessageScreen;

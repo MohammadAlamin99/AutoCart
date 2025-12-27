@@ -28,7 +28,7 @@ const RegScanScreen = () => {
           <Text style={styles.buttonText}>Open Camera</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.secondayButton}>
-          <Text style={styles.secondayButtonText}>Place  Ad Manually</Text>
+          <Text style={styles.secondayButtonText}>Place Ad Manually</Text>
         </TouchableOpacity>
       </View>
     </View>
