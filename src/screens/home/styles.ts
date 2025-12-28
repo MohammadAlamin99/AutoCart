@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ffffff',
+    backgroundColor: '#F9FAFB',
   },
   header: {
     flexDirection: 'row',
@@ -37,6 +37,7 @@ export const styles = StyleSheet.create({
     fontSize: 12,
     fontWeight: '600',
     marginRight: 4,
+    fontFamily: 'SourceSans3-Regular',
   },
   filterIconButton: {
     padding: 4,
@@ -64,6 +65,7 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
     marginBottom: 35,
     fontWeight: '400',
+    fontFamily: 'SourceSans3-Regular',
   },
   mainButton: {
     backgroundColor: '#07B007',
@@ -81,5 +83,6 @@ export const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 16,
     fontWeight: '600',
+    fontFamily: 'SourceSans3-SemiBold',
   },
 });

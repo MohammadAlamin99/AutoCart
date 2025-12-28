@@ -17,20 +17,22 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(0,0,0,0.25)',
   },
   content: {
-    marginTop: height * 0.17,
+    marginTop: height * 0.12,
     paddingHorizontal: 16,
   },
   title: {
-    fontSize: 41,
+    fontSize: 40,
     fontWeight: '400',
     color: '#1F2937',
     marginBottom: 16,
+    fontFamily: 'SourceSans3-Regular',
   },
   subtitle: {
     fontSize: 14,
     lineHeight: 21,
     color: '#1F2937',
     maxWidth: '90%',
+    fontFamily: 'SourceSans3-Regular',
   },
   bottom: {
     flexDirection: 'row',
@@ -59,6 +61,7 @@ const styles = StyleSheet.create({
     color: '#07B007',
     fontSize: 16,
     fontWeight: '600',
+    fontFamily: 'SourceSans3-Regular',
   },
 });
 

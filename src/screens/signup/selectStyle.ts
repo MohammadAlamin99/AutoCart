@@ -12,6 +12,7 @@ export const styles = StyleSheet.create({
     fontWeight: '600',
     marginBottom: 32,
     textAlign: 'center',
+    fontFamily: 'SourceSans3-SemiBold',
   },
 
   card: {
@@ -48,12 +49,14 @@ export const styles = StyleSheet.create({
     fontSize: 12,
     fontWeight: '600',
     color: '#6B7280',
+    fontFamily: 'SourceSans3-Regular',
   },
 
   cardSub: {
-    fontSize: 12 ,
+    fontSize: 12,
     color: '#111827',
     marginTop: 4,
+    fontFamily: 'SourceSans3-Regular',
   },
 
   radioOuter: {
