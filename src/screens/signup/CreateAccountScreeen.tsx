@@ -10,7 +10,6 @@ import {
   Image,
   Alert,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { launchCamera, Asset, CameraOptions } from 'react-native-image-picker';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
