@@ -12,7 +12,7 @@ import { launchCamera } from 'react-native-image-picker';
 import { styles } from './style';
 
 const APP_BAR_COLOR = '#F9FAFB';
-const SCREEN_BG_COLOR = '#F9FAFB';
+const SCREEN_BG_COLOR = '#ffffffff';
 
 const RegScanScreen = () => {
   const openCamera = () => {
